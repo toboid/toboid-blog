@@ -1,16 +1,16 @@
 # Mandatory settings
 
-name: Chalk
+name: toboid
 paginate: 25
 paginate_path: "/posts/page/:num/"
-url: # add site url http://example.com/
-blog_theme: light # Or use dark
+url: http://toboid.com # add site url http://example.com/
+blog_theme: dark # use light or dark
 
 # Optional settings
 
 discus_identifier: # Add your Disqus identifier
-ga_analytics: # Add your GA Tracking Id
-rss_enabled: true # Change to false if not
+ga_analytics: UA-90385709-1 # Add your GA Tracking Id
+rss_enabled: false # Change to false if not
 about_enabled: false # Change to true if you wish to show an icon in the navigation that redirects to the about page
 social:
   dribbble: # Add your Dribbble handle
