@@ -4,7 +4,7 @@ name: toboid
 paginate: 25
 paginate_path: "/posts/page/:num/"
 url: http://toboid.com # add site url http://example.com/
-blog_theme: dark # use light or dark
+blog_theme: light # use light or dark
 
 # Optional settings
 
