@@ -54,6 +54,8 @@ exclude:
   - bin/*
   - bower.json
   - circle.yml
+  - docker-compose.yml
+  - Dockerfile
   - Gemfile
   - Gemfile.lock
   - README.md
