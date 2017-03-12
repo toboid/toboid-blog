@@ -23,28 +23,13 @@ $color_atlantis: #a6e22e;
   border: 1px solid $base-border-color;
   border-radius: 1px;
   margin-bottom: 30px;
-
-  @at-root code#{&} {
-    color: $gray-darkest;
-    background: lighten($gray-lightest, 6);
-  }
-}
-
-// Responsive
-// =============================================================================
-
-@include breakpoint(small) {
-  .highlight {
-    padding: 30px 25px;
-    font-size: 14px;
-  }
 }
 
 // Highlighting
 // =============================================================================
 
 .highlight {
-  padding: 30px 50px;
+  padding: 30px;
   margin: 0;
   overflow: auto;
   font-weight: 400;
@@ -118,4 +103,14 @@ $color_atlantis: #a6e22e;
   .gu { color: $color_pablo; } /* Generic.Subheading & Diff Unified/Comment? */
   .gd { color: $color_radical_red; } /* Generic.Deleted & Diff Deleted */
   .gi { color: $color_atlantis; } /* Generic.Inserted & Diff Inserted */
+}
+
+// Responsive
+// =============================================================================
+
+@include breakpoint(small) {
+  .highlight {
+    padding: 25px;
+    font-size: 14px;
+  }
 }
