@@ -5,8 +5,7 @@ set -e
 echo "Started deploying"
 
 # Build site.
-bower install
-bundle exec jekyll build
+docker run --rm -i -t -v "$PWD":/app --name toboid.com_c toboid.com bundle exec jekyll build
 
 # Push to surge
 surge _site/
