@@ -50,3 +50,14 @@ If you are using a sitemap index file to link to multiple sitemap files then it'
 
 `curl https://www.sitemaps.org/schemas/sitemap/0.9/siteindex.xsd > siteindex.xsd`
 
+# Google News sitemaps
+Google have their own set of extensions to the sitemap format for specification of additional attributes required for Google News indexing. The News specific elements are in their own XML namespace, the schema is available [here](http://www.google.com/schemas/sitemap-news/0.9/sitemap-news.xsd) we can save it down using the snippet: `curl http://www.google.com/schemas/sitemap-news/0.9/sitemap-news.xsd > siteindex.xsd`
+
+When validating a sitemap that includes both the standard and the News specific elements we need a combined XSD to validate against; we can do this by importing the News schema into the main schema. Once the Google News XSD is saved into your project add the following snippet into your standard sitemap XSD as a child of the `xsd:schema` element. The `schemaLocation` path is relative to the working directory of the node process.
+``` xml
+<xsd:import
+    namespace="http://www.google.com/schemas/sitemap-news/0.9"
+    schemaLocation="./sitemap-xsd/sitemap-news.xsd"/>
+```
+
+With this amendment, you can validate the sitemap against the XSD as described above.
