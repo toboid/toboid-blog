@@ -7,7 +7,7 @@ tags: [web, seo, xml, node, javascript]
 ---
 
 # Introduction
-Sitemaps are a way to provide search engines with the info about which pages on your site should be crawled and how often. Sitemaps use XML and if this is not valid, search engines may not be able to crawl your content. In this post I will demonstrate how to use XML schemas to validate sitemap XML files to prevent such issues. For more information about sitemaps and sitemap index files see [sitemap documentation](https://www.sitemaps.org/protocol.html).
+Sitemaps are a way to tell search engines which pages on your site should be crawled and how often. Sitemaps use XML and if this is not valid, search engines may not be able to crawl your content. In this post I will demonstrate how to use XML schemas to validate sitemap XML files to prevent such issues. For more information about sitemaps and sitemap index files see [sitemap documentation](https://www.sitemaps.org/protocol.html).
 
 # Walkthrough
 First we need to download the XML schema (XSD) to validate against. It's available [here](https://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd), we'll save it as sitemap.xsd:
