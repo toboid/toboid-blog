@@ -4,14 +4,14 @@
     {% if site.about_enabled == true %}
       <li>
         <a href="{{ 'about' | relative_url }}" title="About me">
-          <span class="icon icon-android-person"></span>
+          <svg class="icon icon-user"><use xlink:href="{% asset_path symbol-defs.svg %}#icon-user"></use></svg>
         </a>
       </li>
     {% endif %}
     {% if site.social.twitter %}
       <li>
         <a href="https://twitter.com/{{ site.social.twitter }}" target="_blank" title="Twitter">
-          <span class="icon icon-social-twitter"></span>
+          <svg class="icon icon-twitter"><use xlink:href="{% asset_path symbol-defs.svg %}#icon-twitter"></use></svg>
         </a>
       </li>
     {% endif %}
@@ -25,7 +25,7 @@
     {% if site.social.github %}
       <li>
         <a href="https://github.com/{{ site.social.github }}" target="_blank" title="GitHub">
-          <span class="icon icon-social-github"></span>
+          <svg class="icon icon-github"><use xlink:href="{% asset_path symbol-defs.svg %}#icon-github"></use></svg>
         </a>
       </li>
     {% endif %}
@@ -46,7 +46,7 @@
     {% if site.social.linkedin %}
       <li>
         <a href="https://www.linkedin.com/in/{{ site.social.linkedin }}" target="_blank" title="LinkedIn">
-          <span class="icon icon-social-linkedin"></span>
+          <svg class="icon icon-linkedin2"><use xlink:href="{% asset_path symbol-defs.svg %}#icon-linkedin2"></use></svg>
         </a>
       </li>
     {% endif %}
@@ -60,14 +60,14 @@
     {% if site.social.email %}
       <li>
         <a href="mailto:{{ site.social.email }}" title="Email">
-          <span class="icon icon-at"></span>
+            <svg class="icon icon-envelop"><use xlink:href="{% asset_path symbol-defs.svg %}#icon-envelop"></use></svg>
         </a>
       </li>
     {% endif %}
     {% if site.rss_enabled == true %}
       <li>
         <a href="{{ 'feed.xml' | relative_url }}" target="_blank" title="RSS">
-          <span class="icon icon-social-rss"></span>
+            <svg class="icon icon-rss"><use xlink:href="{% asset_path symbol-defs.svg %}#icon-rss"></use></svg>
         </a>
       </li>
     {% endif %}
