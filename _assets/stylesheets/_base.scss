@@ -17,12 +17,16 @@ html {
 
 body {
   margin: 0 auto;
-  font-family: $base-font-family;
+  font-family: $base-font-family-fallback;
   -webkit-font-smoothing: antialiased;
   font-weight: $base-font-weight;
   line-height: $base-line-height;
   color: $base-font-color;
   background: $body-background;
+
+  .webfonts & {
+      font-family: $base-font-family;
+  }
 }
 
 // Typography
@@ -120,7 +124,6 @@ abbr {
 blockquote {
   padding: 0 0 4px 15px;
   margin: 0 0 0 -20px;
-  font-family: $sans-serif;
   font-size: 20px;
   font-style: italic;
   line-height: 1.6;
