@@ -14,7 +14,8 @@ We need to download the XML schema (XSD) to validate against. It's available [he
 
 ``` bash
 mkdir -p test/schemas
-curl https://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd > test/schemas/sitemap.xsd
+curl https://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd > \
+  test/schemas/sitemap.xsd
 ```
 
 We'll use [libxmljs](https://github.com/libxmljs/libxmljs) to perform the validation:
@@ -44,7 +45,10 @@ If you're using a [sitemap index](https://www.sitemaps.org/protocol.html#index) 
 # Google News sitemaps
 Google have their own set of extensions to the sitemap format for Google News specific information. The News specific elements are in their own XML namespace, the schema is available [here](http://www.google.com/schemas/sitemap-news/0.9/sitemap-news.xsd). We'll save it alongside the main schema.
 
-`curl http://www.google.com/schemas/sitemap-news/0.9/sitemap-news.xsd > test/schemas/sitemap-news.xsd`
+``` bash
+curl http://www.google.com/schemas/sitemap-news/0.9/sitemap-news.xsd > \
+  test/schemas/sitemap-news.xsd
+```
 
 When validating a sitemap that includes both the standard and the News specific elements we need a combined XSD to validate against; we can do this by importing the News schema into the main schema.
 
