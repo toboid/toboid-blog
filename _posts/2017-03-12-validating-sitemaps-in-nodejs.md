@@ -35,28 +35,8 @@ The validation code will live in a file called `sitemap.tests.js` and we'll assu
 
 In this example I'm reading the sitemap and schema from the local file system, however the same approach could easily be used to validate a sitemap that's generated dynamically. Just call the endpoint and use libxmljs in the same way as shown here, to parse and validate it. Then you can assert on and report the results however you like.
 
-Here's `sitemap.tests.js`:
-
-``` javascript
-const assert = require('assert');
-const fs = require('fs');
-const libxmljs = require('libxmljs');
-
-// Read the sitemap and schema from the file system
-// Could just as easily get these over HTTP
-const sitemap = fs.readFileSync('../sitemap.xml');
-const schema = fs.readFileSync('./schemas/sitemap.xsd');
-
-// Parse the sitemap and schema
-const sitemapDoc = libxmljs.parseXml(sitemap);
-const schemaDoc = libxmljs.parseXml(schema);
-
-// Perform validation
-const isValid = sitemapDoc.validate(schemaDoc);
-
-// Check results
-assert.ok(isValid, sitemapDoc.validationErrors);
-```
+Here's `sitemaps.test.js`:
+<script src="https://gist.github.com/toboid/05ff688375cded9412dccbd0adc12454.js"></script>
 
 # Sitemap index files
 If you're using a [sitemap index](https://www.sitemaps.org/protocol.html#index) file to link to multiple sitemap files then it's a good idea to also validate these. There is a separate schema available [here](hhttps://www.sitemaps.org/schemas/sitemap/0.9/siteindex.xsd) but other than that the process is exactly the same as for the sitemap files themselves.
@@ -80,16 +60,7 @@ For example given the following file layout:
 
 We can use an `xsd:import` import element to import another XSD. The import should be a child of the `xsd:schema` element. Note that the `schemaLocation` path is relative to the working directory of the node process not the file importing it; here I am assuming that the tests are being run from the root of the project.
 
-``` xml
-<?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema ...>
-    <xsd:import
-        namespace="http://www.google.com/schemas/sitemap-news/0.9"
-        schemaLocation="./test/schemas/sitemap-news.xsd"/>
-
-    ...
-</xsd:schema>
-```
+<script src="https://gist.github.com/toboid/c2a24d690397a483a374e6dcd4a67379.js"></script>
 
 Once you have a combined XSD you can validate the sitemap against the XSD as described above.
 
