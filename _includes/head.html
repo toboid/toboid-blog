@@ -29,7 +29,11 @@
       if (localStorage.getItem('has-fonts')) {
           document.documentElement.classList.add('webfonts');
       } else {
-          new FontFaceObserver('Lato').load().then(function () {
+          Promise.all([
+              new FontFaceObserver('Lato', {weight: 400}).load(),
+              new FontFaceObserver('Lato', {weight: 700}).load()
+          ])
+          .then(function () {
               requestAnimationFrame(function () {
                   document.documentElement.classList.add('webfonts');
               });
