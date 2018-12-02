@@ -17,8 +17,9 @@
   <meta name="twitter:title" content="{{ page.title }}">
   <meta name="twitter:description" content="{{ page.description }}">
   <meta name="twitter:image" content="{{ site.url }}{% if page.og_image %}{{ page.og_image | asset_path }}{% else %}{% asset_path og-image.jpg %}{% endif %}">
-
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700" media="all">
+  <style media="all">
+    {% include webfonts.css %}
+  </style>
   {% stylesheet light %}
   <link rel="icon" href="{{ 'favicon.ico?v=4' | absolute_url }}" />
   <link rel="apple-touch-icon" href="{% asset_path apple-touch-icon.png %}">
