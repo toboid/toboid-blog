@@ -7,8 +7,7 @@ echo "Started deploying"
 # Build site.
 docker run --rm -i -t -v "$PWD":/app --name toboid.com_c toboid.com bundle exec jekyll build
 
-# Push to surge
-surge _site/
+netlify deploy --dir=_site
 
 echo "Deployed Successfully!"
 
