@@ -1,7 +1,8 @@
 {% if site.ga_analytics %}
-  <script>
+  <script type="text/plain" data-cookieconsent="statistics">
     window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
     ga('create','{{ site.ga_analytics }}','auto');
+    ga('set', 'anonymizeIp', true);
     ga('send','pageview');
 
     window.addEventListener('load', function () {
