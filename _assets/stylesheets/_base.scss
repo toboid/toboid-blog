@@ -17,16 +17,13 @@ html {
 
 body {
   margin: 0 auto;
-  font-family: $base-font-family-fallback;
+  font-family: $base-font-family $base-font-family-fallback;
+  font-display: swap;
   -webkit-font-smoothing: antialiased;
   font-weight: $base-font-weight;
   line-height: $base-line-height;
   color: $base-font-color;
   background: $body-background;
-
-  .webfonts & {
-      font-family: $base-font-family;
-  }
 }
 
 // Typography
