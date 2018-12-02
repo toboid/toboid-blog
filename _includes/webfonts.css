@@ -1,7 +1,7 @@
 /* latin-ext */
 @font-face {
   font-family: 'Lato';
-  font-display: swap;
+  font-display: fallback;
   font-style: normal;
   font-weight: 400;
   src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v14/S6uyw4BMUTPHjxAwXiWtFCfQ7A.woff2) format('woff2');
@@ -10,7 +10,7 @@
 /* latin */
 @font-face {
   font-family: 'Lato';
-  font-display: swap;
+  font-display: fallback;
   font-style: normal;
   font-weight: 400;
   src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v14/S6uyw4BMUTPHjx4wXiWtFCc.woff2) format('woff2');
@@ -19,7 +19,7 @@
 /* latin-ext */
 @font-face {
   font-family: 'Lato';
-  font-display: swap;
+  font-display: fallback;
   font-style: normal;
   font-weight: 700;
   src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v14/S6u9w4BMUTPHh6UVSwaPGQ3q5d0N7w.woff2) format('woff2');
@@ -28,7 +28,7 @@
 /* latin */
 @font-face {
   font-family: 'Lato';
-  font-display: swap;
+  font-display: fallback;
   font-style: normal;
   font-weight: 700;
   src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v14/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2) format('woff2');
